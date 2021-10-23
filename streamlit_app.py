@@ -17,7 +17,7 @@ st.write('---')
 boston = load_boston()
 X, Y = boston.data, boston.target
 
-
+X.head()
 # Loads the Boston House Price Dataset
 #boston = "http://lib.stat.cmu.edu/datasets/boston"
 #X = pd.DataFrame(raw_df.data, columns=raw_df.feature_names)

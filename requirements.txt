@@ -3,5 +3,4 @@ pandas
 streamlit 
 matplotlib
 shap
-matplotlib.pyplot
 sklearn

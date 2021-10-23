@@ -9,14 +9,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
-import matplotlib.pyplot as plt
+
 
 
 
 
 st.write("""
-# Boston House Price Prediction App
-This app predicts the **Boston House Price**!
+# 
+This Price**!
 """)
 st.write('---')
 

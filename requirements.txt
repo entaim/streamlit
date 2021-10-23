@@ -4,3 +4,4 @@ streamlit
 matplotlib
 numpy
 sklearn
+python3.7

@@ -11,6 +11,22 @@ This app predicts the **Boston House Price**!
 """)
 st.write('---')
 
+st.session_state['answer'] = ''!
+
+st.write(st.session_state)
+
+realans = ['', 'abc', 'edf']
+
+if  st.session_state['answer'] in realans:
+    answerStat = "correct"
+elif st.session_state['answer'] not in realans:
+    answerStat = "incorrect"
+
+st.write(st.session_state)
+st.write(answerStat)
+
+
+
 # Loads the Boston House Price Dataset
 boston = datasets.load_boston()
 X = pd.DataFrame(boston.data, columns=boston.feature_names)

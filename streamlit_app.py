@@ -1,22 +1,13 @@
-from collections import namedtuple
-import altair as alt
-import math
-import pandas as pd
-import streamlit as st
 import streamlit as st
 import pandas as pd
-#import shap
+import shap
 import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 
-
-
-
-
 st.write("""
-# 
-This Price**!
+# Boston House Price Prediction App
+This app predicts the **Boston House Price**!
 """)
 st.write('---')
 

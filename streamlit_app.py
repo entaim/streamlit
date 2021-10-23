@@ -10,7 +10,7 @@ st.write("""
 This app predicts the **Boston House Price**!
 """)
 st.write('---')
-def main():
+
 # Loads the Boston House Price Dataset
 boston = datasets.load_boston()
 X = pd.DataFrame(boston.data, columns=boston.feature_names)
@@ -83,8 +83,6 @@ plt.title('Feature importance based on SHAP values (Bar)')
 shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
 
-if __name__ == "__main__":
-    main()
 
 
 

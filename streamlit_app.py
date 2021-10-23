@@ -4,7 +4,7 @@ import shap
 import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
-
+import numpy as np
 st.write("""
 # Boston House Price Prediction App
 This app predicts the **Boston House Price**!
@@ -12,9 +12,14 @@ This app predicts the **Boston House Price**!
 st.write('---')
 
 data_url = "http://lib.stat.cmu.edu/datasets/boston"
-raw_df = pd.read_csv(data_url, sep="\s+", skiprows=22, header=None)
+raw_df = pd.read_csv(data_url, sep="s+", skiprows=22, header=None)
 data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
-raw_df = raw_df.values[1::2, 2]
+target = raw_df.values[1::2, 2]
+import warnings
+from sklearn.datasets import load_boston
+# You should probably not use this dataset.
+warnings.filterwarnings("ignore")
+X, Y = load_boston(return_X_y=True)
 # Loads the Boston House Price Dataset
 boston = "http://lib.stat.cmu.edu/datasets/boston"
 X = pd.DataFrame(raw_df.data, columns=raw_df.feature_names)

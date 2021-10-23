@@ -10,7 +10,7 @@ st.write("""
 This app predicts the **Boston House Price**!
 """)
 st.write('---')
-
+def main():
 # Loads the Boston House Price Dataset
 boston = datasets.load_boston()
 X = pd.DataFrame(boston.data, columns=boston.feature_names)

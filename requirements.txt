@@ -4,5 +4,4 @@ streamlit
 matplotlib
 numpy
 sklearn
-
-pip-upgrade
+pip install shap

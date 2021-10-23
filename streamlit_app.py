@@ -14,10 +14,13 @@ This app predicts the **Boston House Price**!
 """)
 st.write('---')
 
-boston = load_boston()
-X, Y = boston.data, boston.target
-print(boston)
-
+#boston = load_boston()
+#from sklearn.datasets import load_boston
+boston_dataset = load_boston()
+#X, Y = boston.data, boston.target
+#print(boston)
+X = pd.DataFrame(boston_dataset.data, columns=boston_dataset.feature_names)
+Y = boston['MEDV'] = boston_dataset.target
 # Loads the Boston House Price Dataset
 #boston = "http://lib.stat.cmu.edu/datasets/boston"
 #X = pd.DataFrame(raw_df.data, columns=raw_df.feature_names)

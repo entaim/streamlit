@@ -11,7 +11,7 @@ This app predicts the **Boston House Price**!
 """)
 st.write('---')
 
-st.session_state['answer'] = ''!
+st.session_state['answer'] = ''
 
 st.write(st.session_state)
 

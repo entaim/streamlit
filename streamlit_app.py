@@ -19,9 +19,9 @@ X, Y = boston.data, boston.target
 
 
 # Loads the Boston House Price Dataset
-boston = "http://lib.stat.cmu.edu/datasets/boston"
-X = pd.DataFrame(raw_df.data, columns=raw_df.feature_names)
-Y = pd.DataFrame(raw_df.target, columns=["MEDV"])
+#boston = "http://lib.stat.cmu.edu/datasets/boston"
+#X = pd.DataFrame(raw_df.data, columns=raw_df.feature_names)
+#Y = pd.DataFrame(raw_df.target, columns=["MEDV"])
 
 # Sidebar
 # Header of Specify Input Parameters

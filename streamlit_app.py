@@ -82,3 +82,9 @@ st.write('---')
 plt.title('Feature importance based on SHAP values (Bar)')
 shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
+
+if __name__ == "__main__":
+    main()
+
+
+

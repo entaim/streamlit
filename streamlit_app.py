@@ -144,7 +144,7 @@ shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
 
 st.write('---')
-st.write('## Our Client')
+st.write('## Our Client :dizzy:')
 #st.write(x1)
 #st.write()
 st.write("""

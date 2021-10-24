@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
-from sklearn.datasets import load_boston
+#from sklearn.datasets import load_boston
 
 st.write("""
 # Welcome To T5 
@@ -19,7 +19,7 @@ st.write('---')
 
 #boston = load_boston()
 #from sklearn.datasets import load_boston
-boston = load_boston()
+#boston = load_boston()
 #X, Y = boston.data, boston.target
 #print(boston)
 #boston = pd.DataFrame(boston_dataset.data, columns=boston_dataset.feature_names)
@@ -131,10 +131,13 @@ shap_values = explainer(X)
 
 # visualize the first prediction's explanation
 shap.plots.waterfall(shap_values[0])
+shap.summary_plot(shap_values, X)
 shap.plots.force(shap_values[0])
+shap.summary_plot(shap_values, X)
 st.write('---')
 
-
+shap.plots.force(shap_values[0])
+shap.summary_plot(shap_values, X)
 
 
 

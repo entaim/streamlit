@@ -119,7 +119,7 @@ model.fit(X_train, y_train)
 # Apply Model to Make Prediction
 prediction = model.predict(df)
 
-st.header('Predicted Price :red_circle:')
+st.header('Predicted Price (Saudi Riyal) :red_circle:')
 st.write(prediction)
 st.write('---')
 
@@ -141,8 +141,8 @@ shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
 
 st.write('---')
-st.write('* Table of hotels info')
-st.write(x1)
+st.write('* Our Client')
+#st.write(x1)
 
 
 

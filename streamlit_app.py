@@ -94,7 +94,7 @@ model.fit(X, Y)
 # Apply Model to Make Prediction
 prediction = model.predict(df)
 
-st.header('Prediction of MEDV')
+st.header('Prediction of price')
 st.write(prediction)
 st.write('---')
 

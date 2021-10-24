@@ -126,7 +126,7 @@ import xgboost
 
 # explain the model's predictions using SHAP
 # (same syntax works for LightGBM, CatBoost, scikit-learn, transformers, Spark, etc.)
-explainer = shap.Explainer(model)
+explainer = shap.TreeExplainer(model)
 shap_values = explainer(X)
 
 # visualize the first prediction's explanation

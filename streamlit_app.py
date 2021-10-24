@@ -23,7 +23,7 @@ st.write("""
 """)
 st.write('---')
 st.write("""
-# Price Prediction App 
+# Dynamic Price Prediction 
 This app predicts the **Booking.com Prices**!
 """)
 st.write('---')
@@ -112,7 +112,7 @@ df = user_input_features()
 # Main Panel
 
 # Print specified input parameters
-st.header('Specified Input parameters')
+#st.header('Specified Input parameters')
 st.write()
 st.write('---')
 

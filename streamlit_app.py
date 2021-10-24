@@ -50,10 +50,10 @@ x1['Log_price'] = np.log(x1['price'])
 
 
 
-#st.write(x1)
+st.write(x1)
 X=  x1[['beds','number_of_ratings','rating']]
 Y= x1['price']
-#t.write(X)
+#st.write(X)
 
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=40)
 #X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=10)

@@ -112,8 +112,11 @@ shap.summary_plot(shap_values, X)
 st.pyplot(bbox_inches='tight')
 st.write('---')
 
+
 plt.title('Feature importance based on SHAP values (Bar)')
 shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
+
+shap.plots.scatter(shap_values[:,"RM"], color=shap_values)
 
 

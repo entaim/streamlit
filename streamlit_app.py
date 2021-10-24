@@ -125,7 +125,7 @@ import xgboost
 
 # train an XGBoost model
 
-model = RandomForestRegressor.fit(X, Y)
+
 
 # explain the model's predictions using SHAP
 # (same syntax works for LightGBM, CatBoost, scikit-learn, transformers, Spark, etc.)

@@ -112,7 +112,7 @@ df = user_input_features()
 #st.write()
 #st.write('---')
 
-#st.set_option('deprecation.showPyplotGlobalUse', False)
+st.set_option('deprecation.showPyplotGlobalUse', False)
 # Build Regression Model
 model = RandomForestRegressor()
 model.fit(X_train, y_train)

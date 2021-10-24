@@ -123,7 +123,7 @@ model.fit(X_train, y_train)
 # Apply Model to Make Prediction
 prediction = model.predict(df)
 
-st.header('Prediction of price')
+st.header('Predicted Price')
 st.write(prediction)
 st.write('---')
 

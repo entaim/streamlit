@@ -9,8 +9,8 @@ from sklearn.datasets import load_boston
 
 
 st.write("""
-# Price Prediction App
-This app predicts the **Booking.com Price**!
+# Price Prediction App 
+This app predicts the **Booking.com Prices**! What Are You Waiting For!!!
 """)
 st.write('---')
 

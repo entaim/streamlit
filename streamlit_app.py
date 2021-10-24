@@ -27,9 +27,9 @@ boston = load_boston()
 #Y = pd.DataFrame(raw_df.target, columns=["MEDV"])
 X = pd.DataFrame(boston.data, columns=boston.feature_names)
 Y = pd.DataFrame(boston.target, columns=["MEDV"])
-st.write(X)
 
-
+df4 = pd.read_csv('reg22.csv') 
+st.write(df4)
 
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')

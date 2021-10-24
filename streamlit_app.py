@@ -70,10 +70,10 @@ st.sidebar.header('Specify Input Parameters')
 def user_input_features():
     
     #AGE = st.sidebar.slider('AGE',  float(X.AGE.min()),  float(X.AGE.max()),  float(X.AGE.mean()))
-    beds = st.sidebar.slider('beds',  int(X.beds.min()),  int(X.beds.max()),  int(X.beds.mean()))
-    review = st.sidebar.slider('number_of_ratings',  int(X.number_of_ratings.min()),  int(X.number_of_ratings.max()),  int(X.number_of_ratings.mean()))
-    rating = st.sidebar.slider('rating',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
-    Size = st.sidebar.slider('Size',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
+    beds = st.sidebar.slider('Number of beds',  int(X.beds.min()),  int(X.beds.max()),  int(X.beds.mean()))
+    review = st.sidebar.slider('Number of reviews',  int(X.number_of_ratings.min()),  int(X.number_of_ratings.max()),  int(X.number_of_ratings.mean()))
+    rating = st.sidebar.slider('Ratings',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
+    Size = st.sidebar.slider('Room Size(m2)',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
     #PTRATIO = st.sidebar.slider('PTRATIO',  float(X.PTRATIO.min()), float(X.PTRATIO.max()),  float(X.PTRATIO.mean()))
    
     data = {'Number of beds': beds,

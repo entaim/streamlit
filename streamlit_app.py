@@ -51,7 +51,7 @@ st.write(x1)
 
 
 
-X=  x1[['beds','number_of_ratings','rating','Size']]
+X=  x1[['beds','number_of_ratings','rating']]
 Y= x1['price']
 #st.write(X)
 
@@ -73,13 +73,13 @@ def user_input_features():
     beds = st.sidebar.slider('Number of beds',  int(X.beds.min()),  int(X.beds.max()),  int(X.beds.mean()))
     review = st.sidebar.slider('Number of reviews',  int(X.number_of_ratings.min()),  int(X.number_of_ratings.max()),  int(X.number_of_ratings.mean()))
     rating = st.sidebar.slider('Ratings',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
-    Size = st.sidebar.slider('Room Size(m2)',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
+   # Size = st.sidebar.slider('Room Size(m2)',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
     #PTRATIO = st.sidebar.slider('PTRATIO',  float(X.PTRATIO.min()), float(X.PTRATIO.max()),  float(X.PTRATIO.mean()))
    
     data = {'Number of beds': beds,
             'Number of reviews': review,
             'Ratings': rating,
-            'Room Size(m2)':Size}
+            }
             
             
           

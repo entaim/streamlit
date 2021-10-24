@@ -48,13 +48,13 @@ def user_input_features():
     #RM = st.sidebar.slider('RM',  float(X.RM.min()),  float(X.RM.max()),  float(X.RM.mean()))
     #AGE = st.sidebar.slider('AGE',  float(X.AGE.min()),  float(X.AGE.max()),  float(X.AGE.mean()))
     beds = st.sidebar.slider('beds',  int(X.beds.min()),  int(X.beds.max()),  int(X.beds.mean()))
-    number_of_ratings = st.sidebar.slider('number_of_ratings',  float(X.number_of_ratings.min()),  float(X.number_of_ratings.max()),  float(X.number_of_ratings.mean()))
+    review = st.sidebar.slider('number_of_ratings',  float(X.number_of_ratings.min()),  float(X.number_of_ratings.max()),  float(X.number_of_ratings.mean()))
     rating = st.sidebar.slider('rating',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
     #PTRATIO = st.sidebar.slider('PTRATIO',  float(X.PTRATIO.min()), float(X.PTRATIO.max()),  float(X.PTRATIO.mean()))
     #B = st.sidebar.slider('B',  float(X.B.min()),  float(X.B.max()),  float(X.B.mean()))
     #LSTAT = st.sidebar.slider('LSTAT',  float(X.LSTAT.min()),  float(X.LSTAT.max()),  float(X.LSTAT.mean()))
     data = {'beds': beds,
-            'number_of_ratings': number_of_ratings,
+            'number_of_ratings': review,
             'rating': rating}
             
             

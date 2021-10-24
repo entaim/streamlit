@@ -55,13 +55,14 @@ X=  x1[['beds','number_of_ratings','rating']]
 Y= x1['price']
 st.write(X)
 
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
 #X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=10)
 
 #X_cv, X_test, y_cv, y_test = train_test_split(X_test, y_test, test_size=0.5, random_state=10)
 
-#sc = StandardScaler()
-#X_train = sc.fit_transform(X_train)
-#X_test = sc.transform(X_test)
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)
 
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')
@@ -118,7 +119,7 @@ st.write('---')
 
 # Build Regression Model
 model = RandomForestRegressor()
-model.fit(X, Y)
+model.fit(X_train, y_train)
 # Apply Model to Make Prediction
 prediction = model.predict(df)
 

@@ -9,7 +9,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import RepeatedKFold
 #from sklearn.datasets import load_boston
 
-
+from sklearn.preprocessing import RobustScaler
 from sklearn.model_selection import train_test_split  
 
 

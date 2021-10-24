@@ -47,7 +47,7 @@ x1= df4
 
 x1['Log_price'] = np.log(x1['price'])
 
-#st.write(x1)
+st.write(x1)
 
 
 

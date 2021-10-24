@@ -7,10 +7,13 @@ from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 from sklearn.datasets import load_boston
 
-
+st.write("""
+# Welcome To T5 
+""")
+st.write('---')
 st.write("""
 # Price Prediction App 
-This app predicts the **Booking.com Prices**! What Are You Waiting For!!!
+This app predicts the **Booking.com Prices**!
 """)
 st.write('---')
 

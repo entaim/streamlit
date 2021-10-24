@@ -25,26 +25,28 @@ boston = load_boston()
 #boston = "http://lib.stat.cmu.edu/datasets/boston"
 #X = pd.DataFrame(raw_df.data, columns=raw_df.feature_names)
 #Y = pd.DataFrame(raw_df.target, columns=["MEDV"])
-X = pd.DataFrame(boston.data, columns=boston.feature_names)
-Y = pd.DataFrame(boston.target, columns=["MEDV"])
+#X = pd.DataFrame(boston.data, columns=boston.feature_names)
+#Y = pd.DataFrame(boston.target, columns=["MEDV"])
 
 df4 = pd.read_csv('reg22.csv') 
 x1= df4
 
 x1['Log_price'] = np.log(x1['price'])
 st.write(x1)
-
+X=  x1[['beds','number_of_ratings','rating']]
+Y= x1['price']
+st.write(X)
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')
 
 def user_input_features():
-    CRIM = st.sidebar.slider('CRIM', float(X.CRIM.min()), float(X.CRIM.max()), float(X.CRIM.mean()))
-    ZN = st.sidebar.slider('ZN', float(X.ZN.min()), float(X.ZN.max()), float(X.ZN.mean()))
-    INDUS = st.sidebar.slider('INDUS',  float(X.INDUS.min()),  float(X.INDUS.max()),  float(X.INDUS.mean()))
-    CHAS = st.sidebar.slider('CHAS',  float(X.CHAS.min()),  float(X.CHAS.max()),  float(X.CHAS.mean()))
-    NOX = st.sidebar.slider('NOX',  float(X.NOX.min()),  float(X.NOX.max()),  float(X.NOX.mean()))
-    RM = st.sidebar.slider('RM',  float(X.RM.min()),  float(X.RM.max()),  float(X.RM.mean()))
-    AGE = st.sidebar.slider('AGE',  float(X.AGE.min()),  float(X.AGE.max()),  float(X.AGE.mean()))
+    #CRIM = st.sidebar.slider('CRIM', float(X.CRIM.min()), float(X.CRIM.max()), float(X.CRIM.mean()))
+    #ZN = st.sidebar.slider('ZN', float(X.ZN.min()), float(X.ZN.max()), float(X.ZN.mean()))
+    #INDUS = st.sidebar.slider('INDUS',  float(X.INDUS.min()),  float(X.INDUS.max()),  float(X.INDUS.mean()))
+    #CHAS = st.sidebar.slider('CHAS',  float(X.CHAS.min()),  float(X.CHAS.max()),  float(X.CHAS.mean()))
+    #NOX = st.sidebar.slider('NOX',  float(X.NOX.min()),  float(X.NOX.max()),  float(X.NOX.mean()))
+    #RM = st.sidebar.slider('RM',  float(X.RM.min()),  float(X.RM.max()),  float(X.RM.mean()))
+    #AGE = st.sidebar.slider('AGE',  float(X.AGE.min()),  float(X.AGE.max()),  float(X.AGE.mean()))
     DIS = st.sidebar.slider('DIS',  float(X.DIS.min()),  float(X.DIS.max()),  float(X.DIS.mean()))
     RAD = st.sidebar.slider('RAD',  float(X.RAD.min()),  float(X.RAD.max()),  float(X.RAD.mean()))
     TAX = st.sidebar.slider('TAX',  float(X.TAX.min()),  float(X.TAX.max()),  float(X.TAX.mean()))

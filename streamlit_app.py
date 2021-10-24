@@ -35,10 +35,15 @@ df4 = pd.read_csv('reg22.csv')
 x1= df4
 
 x1['Log_price'] = np.log(x1['price'])
+
+
+
+
 st.write(x1)
 X=  x1[['beds','number_of_ratings','rating']]
 Y= x1['price']
 st.write(X)
+
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')
 
@@ -91,6 +96,8 @@ st.header('Specified Input parameters')
 st.write()
 st.write('---')
 
+X, Y = make_regression(n_samples=1000, n_features=20, n_informative=15, noise=0.1, random_state=2)
+
 # Build Regression Model
 model = RandomForestRegressor()
 model.fit(X, Y)
@@ -119,25 +126,6 @@ st.pyplot(bbox_inches='tight')
 
 
 
-
-import xgboost
-
-
-
-# explain the model's predictions using SHAP
-# (same syntax works for LightGBM, CatBoost, scikit-learn, transformers, Spark, etc.)
-explainer = shap.TreeExplainer(model)
-shap_values = explainer(X)
-
-# visualize the first prediction's explanation
-shap.plots.waterfall(shap_values[0])
-shap.summary_plot(shap_values, X)
-shap.plots.force(shap_values[0])
-shap.summary_plot(shap_values, X)
-st.write('---')
-
-shap.plots.force(shap_values[0])
-shap.summary_plot(shap_values, X)
 
 
 

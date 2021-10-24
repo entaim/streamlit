@@ -114,7 +114,7 @@ df = user_input_features()
 # Print specified input parameters
 #st.header('Specified Input parameters')
 st.write()
-st.write('---')
+#st.write('---')
 
 
 # Build Regression Model

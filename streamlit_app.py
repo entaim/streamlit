@@ -9,7 +9,7 @@ from sklearn.datasets import load_boston
 
 
 st.write("""
-# Boston House Price Prediction App
+# Price Prediction App
 This app predicts the **Boston House Price**!
 """)
 st.write('---')

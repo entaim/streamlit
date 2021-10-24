@@ -81,9 +81,9 @@ def user_input_features():
     #PTRATIO = st.sidebar.slider('PTRATIO',  float(X.PTRATIO.min()), float(X.PTRATIO.max()),  float(X.PTRATIO.mean()))
     #B = st.sidebar.slider('B',  float(X.B.min()),  float(X.B.max()),  float(X.B.mean()))
     #LSTAT = st.sidebar.slider('LSTAT',  float(X.LSTAT.min()),  float(X.LSTAT.max()),  float(X.LSTAT.mean()))
-    data = {'beds': beds,
-            'number_of_review': review,
-            'rating': rating}
+    data = {'Number of beda': beds,
+            'Number of review': review,
+            'Rating': rating}
             
             
           

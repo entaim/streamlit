@@ -25,7 +25,8 @@ st.write('---')
 st.write("""
 # Dynamic Price Prediction 
 * This app predicts the **Booking.com Prices**!
-![]https://user-images.githubusercontent.com/20365333/138614995-9351a4ea-b100-42b0-ab69-aa3a02216636.png
+
+ ![]https://user-images.githubusercontent.com/20365333/138614995-9351a4ea-b100-42b0-ab69-aa3a02216636.png
 
 """)
 st.write('---')
@@ -148,7 +149,7 @@ st.write('* Our Client')
 #st.write()
 t.write("""
 
-![]https://user-images.githubusercontent.com/20365333/138614995-9351a4ea-b100-42b0-ab69-aa3a02216636.png
+
 
 
 """)

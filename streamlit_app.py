@@ -140,7 +140,9 @@ plt.title('Feature importance based on SHAP values (Bar)')
 shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
 
-
+st.write('---')
+st.write('* Table of hotels info')
+st.write(x1)
 
 
 

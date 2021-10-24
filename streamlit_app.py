@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import shap
 import matplotlib.pyplot as plt
-from sklearn import datasets
+#from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import RepeatedKFold
 #from sklearn.datasets import load_boston
 
 st.write("""

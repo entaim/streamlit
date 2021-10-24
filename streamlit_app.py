@@ -78,8 +78,8 @@ def user_input_features():
    
     data = {'Number of beds': beds,
             'Number of reviews': review,
-            'Ratings': rating
-            'Room Size_m2':Size}
+            'Ratings': rating,
+            'Room Size(m2)':Size}
             
             
           

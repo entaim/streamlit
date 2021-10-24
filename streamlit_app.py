@@ -131,7 +131,8 @@ shap_values = explainer(X)
 
 # visualize the first prediction's explanation
 shap.plots.waterfall(shap_values[0])
-
+shap.plots.force(shap_values[0])
+st.write('---')
 
 
 

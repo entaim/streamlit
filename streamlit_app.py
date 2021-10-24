@@ -6,12 +6,7 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 from sklearn.datasets import load_boston
-[theme]
-primaryColor="#F63366"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#262730"
-font="sans serif"
+
 st.write("""
 # Welcome To T5 
 """)

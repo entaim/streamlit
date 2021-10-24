@@ -121,11 +121,11 @@ st.pyplot(bbox_inches='tight')
 
 
 import xgboost
-import shap
+
 
 # train an XGBoost model
 
-model = xgboost.XGBRegressor().fit(X, Y)
+model = RandomForestRegressor.fit(X, Y)
 
 # explain the model's predictions using SHAP
 # (same syntax works for LightGBM, CatBoost, scikit-learn, transformers, Spark, etc.)

@@ -117,6 +117,26 @@ plt.title('Feature importance based on SHAP values (Bar)')
 shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
 
-shap.plots.scatter(shap_values[:,"RM"], color=shap_values)
+
+
+
+import xgboost
+import shap
+
+# train an XGBoost model
+
+model = xgboost.XGBRegressor().fit(X, Y)
+
+# explain the model's predictions using SHAP
+# (same syntax works for LightGBM, CatBoost, scikit-learn, transformers, Spark, etc.)
+explainer = shap.Explainer(model)
+shap_values = explainer(X)
+
+# visualize the first prediction's explanation
+shap.plots.waterfall(shap_values[0])
+
+
+
+
 
 

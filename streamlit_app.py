@@ -47,10 +47,10 @@ x1= df4
 
 x1['Log_price'] = np.log(x1['price'])
 
+#st.write(x1)
 
 
 
-st.write(x1)
 X=  x1[['beds','number_of_ratings','rating','Size']]
 Y= x1['price']
 #st.write(X)
@@ -68,22 +68,18 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_
 st.sidebar.header('Specify Input Parameters')
 
 def user_input_features():
-    #CRIM = st.sidebar.slider('CRIM', float(X.CRIM.min()), float(X.CRIM.max()), float(X.CRIM.mean()))
-    #ZN = st.sidebar.slider('ZN', float(X.ZN.min()), float(X.ZN.max()), float(X.ZN.mean()))
-    #INDUS = st.sidebar.slider('INDUS',  float(X.INDUS.min()),  float(X.INDUS.max()),  float(X.INDUS.mean()))
-    #CHAS = st.sidebar.slider('CHAS',  float(X.CHAS.min()),  float(X.CHAS.max()),  float(X.CHAS.mean()))
-    #NOX = st.sidebar.slider('NOX',  float(X.NOX.min()),  float(X.NOX.max()),  float(X.NOX.mean()))
-    #RM = st.sidebar.slider('RM',  float(X.RM.min()),  float(X.RM.max()),  float(X.RM.mean()))
+    
     #AGE = st.sidebar.slider('AGE',  float(X.AGE.min()),  float(X.AGE.max()),  float(X.AGE.mean()))
     beds = st.sidebar.slider('beds',  int(X.beds.min()),  int(X.beds.max()),  int(X.beds.mean()))
     review = st.sidebar.slider('number_of_ratings',  int(X.number_of_ratings.min()),  int(X.number_of_ratings.max()),  int(X.number_of_ratings.mean()))
     rating = st.sidebar.slider('rating',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
+    Size = st.sidebar.slider('Size',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
     #PTRATIO = st.sidebar.slider('PTRATIO',  float(X.PTRATIO.min()), float(X.PTRATIO.max()),  float(X.PTRATIO.mean()))
-    #B = st.sidebar.slider('B',  float(X.B.min()),  float(X.B.max()),  float(X.B.mean()))
-    #LSTAT = st.sidebar.slider('LSTAT',  float(X.LSTAT.min()),  float(X.LSTAT.max()),  float(X.LSTAT.mean()))
-    data = {'Number of beda': beds,
-            'Number of review': review,
-            'Rating': rating}
+   
+    data = {'Number of beds': beds,
+            'Number of reviews': review,
+            'Ratings': rating
+            'Room Size':Size}
             
             
           

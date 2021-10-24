@@ -122,14 +122,11 @@ st.pyplot(bbox_inches='tight')
 
 import xgboost
 
-
-# train an XGBoost model
-
-
+model1 = xgboost.XGBRegressor().fit(X, Y)
 
 # explain the model's predictions using SHAP
 # (same syntax works for LightGBM, CatBoost, scikit-learn, transformers, Spark, etc.)
-explainer = shap.Explainer(model)
+explainer = shap.Explainer(model1)
 shap_values = explainer(X)
 
 # visualize the first prediction's explanation

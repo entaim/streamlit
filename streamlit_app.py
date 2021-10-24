@@ -51,7 +51,7 @@ x1['Log_price'] = np.log(x1['price'])
 
 
 st.write(x1)
-X=  x1[['beds','number_of_ratings','rating']]
+X=  x1[['beds','number_of_ratings','rating','Size']]
 Y= x1['price']
 #st.write(X)
 

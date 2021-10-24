@@ -144,16 +144,15 @@ shap.summary_plot(shap_values, X, plot_type="bar")
 st.pyplot(bbox_inches='tight')
 
 st.write('---')
-st.write('* Our Client')
+st.write('## Our Client')
 #st.write(x1)
 #st.write()
 st.write("""
 
-<p align="center">
-  <img width="523" src="https://user-images.githubusercontent.com/20365333/135308375-7014d076-2012-44d8-ac93-4cea66f4026e.png">
-</p>
 
-![] https://user-images.githubusercontent.com/20365333/138614995-9351a4ea-b100-42b0-ab69-aa3a02216636.png
+
+![](https://user-images.githubusercontent.com/20365333/138615337-bfbdfdb2-494c-4265-8ff0-467b158f95d3.png)
+
 
 """)
 

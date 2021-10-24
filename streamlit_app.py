@@ -12,9 +12,7 @@ from sklearn.model_selection import RepeatedKFold
 
 from sklearn.model_selection import train_test_split  
 
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=10)
 
-X_cv, X_test, y_cv, y_test = train_test_split(X_test, y_test, test_size=0.5, random_state=10)
 
 
 
@@ -55,6 +53,9 @@ X=  x1[['beds','number_of_ratings','rating']]
 Y= x1['price']
 st.write(X)
 
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=10)
+
+X_cv, X_test, y_cv, y_test = train_test_split(X_test, y_test, test_size=0.5, random_state=10)
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')
 

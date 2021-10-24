@@ -99,7 +99,8 @@ st.write()
 st.write('---')
 
 X, Y = make_regression(n_samples=1000, n_features=20, n_informative=15, noise=0.1, random_state=2)
-
+cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
+n_scores = cross_val_score(model, X, Y, scoring='neg_mean_absolute_error', cv=cv, n_jobs=-1, error_score='raise')
 # Build Regression Model
 model = RandomForestRegressor()
 model.fit(X, Y)

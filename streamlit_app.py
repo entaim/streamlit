@@ -149,6 +149,9 @@ st.write('* Our Client')
 #st.write()
 st.write("""
 
+<p align="center">
+  <img width="523" src="https://user-images.githubusercontent.com/20365333/135308375-7014d076-2012-44d8-ac93-4cea66f4026e.png">
+</p>
 
 ![] https://user-images.githubusercontent.com/20365333/138614995-9351a4ea-b100-42b0-ab69-aa3a02216636.png
 

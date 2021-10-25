@@ -16,8 +16,8 @@ from sklearn.model_selection import train_test_split
 
 
 
-st.write(<font color='red'>TWelcome To T5 :star: </font>, unsafe_allow_html=True))
 
+<font color='red'>TWelcome To T5 :star: </font>, unsafe_allow_html=True)
 
 st.write("""
 # Welcome To T5 :star: 
@@ -27,7 +27,7 @@ st.write('---')
 st.write("""
 # Dynamic Price Prediction 
 * This app predicts the **Booking.com Prices**!
-
+<font color='red'>TWelcome To T5 :star: </font>, unsafe_allow_html=True)
  
 
 """)

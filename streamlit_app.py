@@ -27,7 +27,7 @@ st.write('---')
 st.write("""
 # Dynamic Price Prediction 
 * This app predicts the **Booking.com Prices**!
-<font color='red'>TWelcome To T5 :star: </font>, unsafe_allow_html=True)
+
  
 
 """)

@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 
 
 
-<font color=‘red’>TWelcome To T5 :star: </font>, unsafe_allow_html=True)
+st.write(<font color='red'>TWelcome To T5 :star: </font>, unsafe_allow_html=True))
 
 
 st.write("""

@@ -149,7 +149,7 @@ st.write('## Our Client :dizzy:')
 #st.write()
 st.write("""
 
-<br>
+
 
 ![](https://user-images.githubusercontent.com/20365333/138615337-bfbdfdb2-494c-4265-8ff0-467b158f95d3.png)
 

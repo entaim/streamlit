@@ -119,7 +119,7 @@ df = user_input_features()
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 # Build Regression Model
-model = RandomForestRegressor()
+model = RandomForestRegressor(n_estimators=1, random_state=10)
 model.fit(X_train, y_train)
 # Apply Model to Make Prediction
 prediction = model.predict(df)

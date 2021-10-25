@@ -7,11 +7,8 @@ from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import RepeatedKFold
-#from sklearn.datasets import load_boston
-
 from sklearn.preprocessing import RobustScaler
 from sklearn.preprocessing import StandardScaler
-
 from sklearn.model_selection import train_test_split  
 
 
@@ -79,31 +76,13 @@ def user_input_features():
     review = st.sidebar.slider('Number of reviews',  int(X.number_of_ratings.min()),  int(X.number_of_ratings.max()),  int(X.number_of_ratings.mean()))
     rating = st.sidebar.slider('Ratings',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
    # Size = st.sidebar.slider('Room Size(m2)',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
-    #PTRATIO = st.sidebar.slider('PTRATIO',  float(X.PTRATIO.min()), float(X.PTRATIO.max()),  float(X.PTRATIO.mean()))
+   
    
     data = {'Number of beds': beds,
             'Number of reviews': review,
             'Ratings': rating,
             }
-            
-            
-          
-        
-            #'LSTAT': LSTAT}
-            #data = {'CRIM': CRIM,
-          #  'ZN': ZN,
-          #  'INDUS': INDUS,
-          #  'CHAS': CHAS,
-           # 'NOX': NOX,
-            #'RM': RM,
-            #'AGE': AGE,
-            #'DIS': DIS,
-            #'RAD': RAD,
-            #'TAX': TAX,
-            #'PTRATIO': PTRATIO,
-            #'B': B,
-            #'LSTAT': LSTAT}
-            
+
             
     features = pd.DataFrame(data, index=[0])
     return features

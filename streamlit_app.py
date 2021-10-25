@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 
 
 
-
+st.header('T5')
 
 st.write("""
 # Welcome To T5 :star: 
@@ -125,7 +125,7 @@ prediction = model.predict(df)
 st.header('Predicted Price (Saudi Riyal) :red_circle:')
 st.write(prediction)
 st.write('---')
-
+st.write('<br>')
 # Explaining the model's predictions using SHAP values
 # https://github.com/slundberg/shap
 explainer = shap.TreeExplainer(model)

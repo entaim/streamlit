@@ -12,7 +12,7 @@ st.markdown("""
 	""")
 
 st.subheader("sample values for the input")
-df=pd.read_csv("example.csv")
+df=pd.read_csv("water1.csv")
 df
 #df_example=df.iloc[df['ph']==6.007427,['Organic_carbon','Conductivity','Hardness']]
 #df_example=df.iloc[0,1:]

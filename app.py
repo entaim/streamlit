@@ -35,15 +35,14 @@ if uploaded_file is not None:
 	input_params=pd.read_csv(uploaded_file)
 
 else:
-	ph==st.sidebar.slider("Ph value",2.1,28.3,12.5)
 	Carbon=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
 	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
 	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
 	
-	dict_values={'ph':ph,"Carbon":Carbon,"Conductivity":Conductivity,"Hardness":Hardness}
+	dict_values={"Carbon":Carbon,"Conductivity":Conductivity,"Hardness":Hardness}
 	features=pd.DataFrame(dict_values,index=[0])
 	input_params=features
-	
+
 
 
 

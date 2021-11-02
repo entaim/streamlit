@@ -40,7 +40,7 @@ else:
 	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
 	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
 	
-	dict_values={'ph':ph,"Carbon":Carbon,"Conductivity":Conductivity,"Hardness":Hardness}
+	dict_values={'ph':ph,"Organic_carbon":Carbon,"Conductivity":Conductivity,"Hardness":Hardness}
 	features=pd.DataFrame(dict_values,index=[0])
 	input_params=features
 	

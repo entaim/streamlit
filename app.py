@@ -57,7 +57,7 @@ else:
 
 load_clf=pickle.load(open('dt_saved_07032020.pkl','rb'))
 #load_clf= pd.read_csv("water1.csv")
-load_clf= load_model('dt_saved_07032020')
+load_clf= load_model('dt_saved_07032020.pkl')
 prediction=load_clf.predict(input_params)
 st.subheader("The Prediction is")
 st.write(prediction[0])

@@ -54,8 +54,8 @@ if uploaded_file is not None:
 else:
 	st.write(input_params)
 
-load_clf=pickle.load(open('water1.csv','rb'))
-
+#load_clf=pickle.load(open('water.pkl','rb'))
+load_clf= pd.read_csv("water١.csv")
 prediction=load_clf.predict(input_params)
 st.subheader("The Prediction is")
 st.write(prediction[0])

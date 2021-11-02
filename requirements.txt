@@ -8,3 +8,5 @@ shap
 numpy
 pathlib 
 xgboost
+pickle
+pycaret

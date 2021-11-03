@@ -40,12 +40,12 @@ else:
 	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
 	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
 	
-	ph=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
-	Solids=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
-	Chloramines=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
-	Sulfate=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
-	Trihalomethanes=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
-	Turbidity=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
+	ph=st.sidebar.slider("ph value",2.1,28.3,12.5)
+	Solids=st.sidebar.slider("Solids value",181.4,753.2,442.85)
+	Chloramines=st.sidebar.slider("Chloramines value",2.1,28.3,12.5)
+	Sulfate=st.sidebar.slider("Sulfate value",47.432,323.3,158.2)
+	Trihalomethanes=st.sidebar.slider("Trihalomethanesvalue",47.432,323.3,158.2)
+	Turbidity=st.sidebar.slider("Turbidity value",2.1,28.3,12.5)
 	
 	
 	dict_values={"Organic_carbon":Organic_carbon,"Conductivity":Conductivity,"Hardness":Hardness,

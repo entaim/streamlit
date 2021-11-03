@@ -8,6 +8,18 @@ from pycaret.classification import *
 st.title(" Water Quality **Estimation**")
 
 
+
+st.set_page_config(layout="wide")
+
+st.markdown("""
+<style>
+.big-font {
+    font-size:300px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
  
 
 st.write("""
@@ -16,7 +28,7 @@ st.write("""
 
 ![](https://user-images.githubusercontent.com/20365333/140042600-a602ed75-6571-4f7b-adee-0d33d51f9cf0.jpg)
 
- <img width="523" src="https://user-images.githubusercontent.com/20365333/140042600-a602ed75-6571-4f7b-adee-0d33d51f9cf0.jpg">
+ 
 
 
 """)

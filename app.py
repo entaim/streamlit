@@ -4,7 +4,18 @@ import numpy as np
 import pickle
 from pycaret.classification import *
 
-st.title(" ater Quality **Estimation**")
+
+st.title(" Water Quality **Estimation**")
+
+st.write("""
+
+
+
+![](https://user-images.githubusercontent.com/20365333/140042600-a602ed75-6571-4f7b-adee-0d33d51f9cf0.jpg)
+
+
+
+""")
 
 st.markdown("""
 	Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection.

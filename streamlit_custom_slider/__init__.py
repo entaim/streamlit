@@ -7,7 +7,7 @@ from typing import Tuple
 # Now the React interface only accepts an array of 1 or 2 elements.
 _component_func = components.declare_component(
     "custom_slider",
-    url="http://localhost:3001",
+    url="https://share.streamlit.io/a-safarji/streamlit/app.py",
 )
 
 

@@ -25,9 +25,10 @@ st.markdown(' <p align="center"><img width="523" src="https://user-images.github
 #st.write(""" """)
 
 st.markdown("""
+	AKN is a material testing laboratory that focuses on water quality tests and classification. Our next step,
+	to expand the business research and development that to start a project to automate the water classification process.
 	Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection.
-	This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit,
-	since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions.
+
 	""")
 
 st.subheader("sample values for the input")

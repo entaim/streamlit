@@ -49,7 +49,7 @@ else:
 	
 	
 	dict_values={"Organic_carbon":Organic_carbon,"Conductivity":Conductivity,"Hardness":Hardness,
-		     "ph":ph,"Solids":Solids,"Chloramines":Chloramines,"Sulfate":Sulfate
+		     "ph":ph,"Solids":Solids,"Chloramines":Chloramines,"Sulfate":Sulfate,
 		     "Trihalomethanes":Trihalomethanes,"Turbidity":Turbidity}
 	features=pd.DataFrame(dict_values,index=[0])
 	input_params=features

@@ -13,7 +13,7 @@ st.markdown(' <p align="center" class=""big-font">  Water Quality Check   </p>',
 st.markdown("""
 <style>
 .big-font {
-    font-size:33px !important;
+    font-size:70px !important;
 }
 </style>
 """, unsafe_allow_html=True)

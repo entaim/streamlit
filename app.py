@@ -56,7 +56,7 @@ if uploaded_file is not None:
 else:
 	ph=st.sidebar.slider("ph value",2.1,28.3,7.5)
 	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,118.2)
-	Solids=st.sidebar.slider("Solids value",181.4,400000.5,14285.58)
+	Solids=st.sidebar.slider("Solids value",181.4,3000,14285.58)
 	Chloramines=st.sidebar.slider("Chloramines value",2.1,28.3,9.27)
 	Sulfate=st.sidebar.slider("Sulfate value",47.432,400.3,333.07)
 	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,418.60)

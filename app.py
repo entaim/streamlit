@@ -13,7 +13,7 @@ st.markdown("""
 	""")
 
 st.subheader("sample values for the input")
-df=pd.read_csv("example.csv")
+df=pd.read_csv("water1.csv")
 #df.drop('Unnamed: 0', axis=1, inplace=True)
 df
 
@@ -36,18 +36,27 @@ if uploaded_file is not None:
 	input_params=pd.read_csv(uploaded_file)
 
 else:
-	Carbon=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
+	Organic_carbon=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
 	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
 	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
-	Hardnesss=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
 	
-	dict_values={"Carbon":Carbon,"Conductivity":Conductivity,"Hardness":Hardness,"Hardnesss":Hardnesss}
+	ph=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
+	Solids=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
+	Chloramines=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
+	Sulfate=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
+	Trihalomethanes=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
+	Turbidity=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
+	
+	
+	dict_values={"Organic_carbon":Organic_carbon,"Conductivity":Conductivity,"Hardness":Hardness,"Hardnesss":Hardnesss,
+		     "ph":ph,"Solids":Solids,"Chloramines":Chloramines,"Sulfate":Sulfate
+		    "Trihalomethanes":Trihalomethanes,"Turbidity":Turbidity}
 	features=pd.DataFrame(dict_values,index=[0])
 	input_params=features
 
 
 
-
+ph Solids Chloramines Sulfate Trihalomethanes Turbidity
 
 st.subheader("user input fields")
 

@@ -7,12 +7,13 @@ from pycaret.classification import *
 
 st.title(" Water Quality **Estimation**")
 
-st.write("""
-
-
 <p align="center">
   <img width="523" src="https://user-images.githubusercontent.com/20365333/140042600-a602ed75-6571-4f7b-adee-0d33d51f9cf0.jpg">
 </p>
+
+st.write("""
+
+
 
 ![](https://user-images.githubusercontent.com/20365333/140042600-a602ed75-6571-4f7b-adee-0d33d51f9cf0.jpg)
 

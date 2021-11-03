@@ -54,15 +54,15 @@ if uploaded_file is not None:
 	input_params=pd.read_csv(uploaded_file)
 
 else:
-	ph=st.sidebar.slider("ph value",2.1,28.3,12.5)
-	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
-	Solids=st.sidebar.slider("Solids value",181.4,753.2,442.85)
-	Chloramines=st.sidebar.slider("Chloramines value",2.1,28.3,12.5)
-	Sulfate=st.sidebar.slider("Sulfate value",47.432,323.3,158.2)
-	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
-	Organic_carbon=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
-	Trihalomethanes=st.sidebar.slider("Trihalomethanesvalue",47.432,323.3,158.2)
-	Turbidity=st.sidebar.slider("Turbidity value",2.1,28.3,12.5)
+	ph=st.sidebar.slider("ph value",2.1,28.3,7.5)
+	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,118.2)
+	Solids=st.sidebar.slider("Solids value",181.4,400000.5,14285.58)
+	Chloramines=st.sidebar.slider("Chloramines value",2.1,28.3,9.27)
+	Sulfate=st.sidebar.slider("Sulfate value",47.432,400.3,333.07)
+	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,418.60)
+	Organic_carbon=st.sidebar.slider("Organic Carbon value",2.1,28.3,16.86)
+	Trihalomethanes=st.sidebar.slider("Trihalomethanesvalue",47.432,323.3,66.42)
+	Turbidity=st.sidebar.slider("Turbidity value",2.1,28.3,3.05)
 
 	dict_values={"ph":ph, "Hardness":Hardness, "Solids":Solids,"Chloramines":Chloramines,"Sulfate":Sulfate,
 		     "Conductivity":Conductivity,"Organic_carbon":Organic_carbon,

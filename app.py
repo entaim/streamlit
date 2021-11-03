@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 from pycaret.classification import *
 
-st.title(" Water Potability **Estimation**")
+st.title(" ater Quality **Estimation**")
 
 st.markdown("""
 	Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection.
@@ -36,20 +36,18 @@ if uploaded_file is not None:
 	input_params=pd.read_csv(uploaded_file)
 
 else:
-	Organic_carbon=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
-	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
-	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
-	
 	ph=st.sidebar.slider("ph value",2.1,28.3,12.5)
+	Hardness=st.sidebar.slider("Hardness value",47.432,323.3,158.2)
 	Solids=st.sidebar.slider("Solids value",181.4,753.2,442.85)
 	Chloramines=st.sidebar.slider("Chloramines value",2.1,28.3,12.5)
 	Sulfate=st.sidebar.slider("Sulfate value",47.432,323.3,158.2)
+	Conductivity=st.sidebar.slider("Conductivity value",181.4,753.2,442.85)
+	Organic_carbon=st.sidebar.slider("Organic Carbon value",2.1,28.3,12.5)
 	Trihalomethanes=st.sidebar.slider("Trihalomethanesvalue",47.432,323.3,158.2)
 	Turbidity=st.sidebar.slider("Turbidity value",2.1,28.3,12.5)
-	
-	
-	dict_values={"Organic_carbon":Organic_carbon,"Conductivity":Conductivity,"Hardness":Hardness,
-		     "ph":ph,"Solids":Solids,"Chloramines":Chloramines,"Sulfate":Sulfate,
+
+	dict_values={"ph":ph, "Hardness":Hardness, "Solids":Solids,"Chloramines":Chloramines,"Sulfate":Sulfate,
+		     "Conductivity":Conductivity,"Organic_carbon":Organic_carbon,
 		     "Trihalomethanes":Trihalomethanes,"Turbidity":Turbidity}
 	features=pd.DataFrame(dict_values,index=[0])
 	input_params=features

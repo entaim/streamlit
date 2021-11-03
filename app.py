@@ -89,6 +89,6 @@ st.subheader("The Prediction is")
 st.write(prediction[0])
 
 if(prediction[0]==1):
-	st.subheader("The water is safe to drink")
+	st.subheader("The water is safe to drink :droplet:")
 else:
-	st.subheader("The water is not safe to drink")
+	st.subheader("The water is not safe to drink :warning: :skull:")

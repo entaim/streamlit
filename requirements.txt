@@ -9,4 +9,4 @@ numpy
 pathlib 
 xgboost
 pycaret
-streamlit_custom_slider
+

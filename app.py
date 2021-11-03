@@ -5,14 +5,11 @@ import pickle
 from pycaret.classification import *
 
 from streamlit_custom_slider import st_custom_slider
-from streamlit_custom_slider import st_range_slider
+
 
 v_custom = st_custom_slider('Hello world', 0, 100, 50, key="slider1")
 st.write(v_custom)
 
-# Add a range slider
-v_custom_range = st_range_slider('Hello world', 0, 100, (20, 60), key="slider2")
-st.write(v_custom_range)
 #st.markdown('<p align="center"> Water Quality **Estimation** </p>', unsafe_allow_html=True))
 
 st.markdown(' <p align="center" class="big-font">  <b>Water Quality <u>Check</b>   </p>', unsafe_allow_html=True)	

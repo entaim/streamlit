@@ -5,11 +5,6 @@ import pickle
 from pycaret.classification import *
 import shap
 import matplotlib.pyplot as plt
-from streamlit_custom_slider import st_custom_slider
-
-
-v_custom = st_custom_slider('Hello world', 0, 100, 50, key="slider1")
-st.write(v_custom)
 
 #st.markdown('<p align="center"> Water Quality **Estimation** </p>', unsafe_allow_html=True))
 

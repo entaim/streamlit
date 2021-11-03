@@ -7,13 +7,13 @@ from pycaret.classification import *
 
 #st.markdown('<p align="center"> Water Quality **Estimation** </p>', unsafe_allow_html=True))
 
-st.markdown(' <p align="center">  Water Quality **Estimation**   </p>', unsafe_allow_html=True)	
+st.markdown(' <p align="center" class=""big-font">  Water Quality Check   </p>', unsafe_allow_html=True)	
 
 
 st.markdown("""
 <style>
 .big-font {
-    font-size:300px !important;
+    font-size:33px !important;
 }
 </style>
 """, unsafe_allow_html=True)

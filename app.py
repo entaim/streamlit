@@ -19,18 +19,9 @@ st.markdown("""
 
 #st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
  
-st.markdown(' <p align="center"><img width="523" src="https://user-images.githubusercontent.com/20365333/135308375-7014d076-2012-44d8-ac93-4cea66f4026e.png"></p>', unsafe_allow_html=True)	
+st.markdown(' <p align="center"><img width="523" src="https://user-images.githubusercontent.com/20365333/140042600-a602ed75-6571-4f7b-adee-0d33d51f9cf0.jpg"></p>', unsafe_allow_html=True)	
 
-st.write("""
-
-
-
-![](https://user-images.githubusercontent.com/20365333/140042600-a602ed75-6571-4f7b-adee-0d33d51f9cf0.jpg)
-
- 
-
-
-""")
+#st.write(""" """)
 
 st.markdown("""
 	Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection.

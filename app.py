@@ -90,7 +90,7 @@ prediction=load_clf.predict(input_params)
 st.write('---')
 st.subheader(":hourglass: The Prediction is")
 #st.write()
-st.write(""":bulb:==""",prediction[0])
+st.write(""":bulb:==> """,prediction[0])
 if(prediction[0]==1):
 	st.subheader("The water is safe to drink :droplet: :thumbsup:")
 else:

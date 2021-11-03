@@ -3,7 +3,8 @@ import pandas as pd
 import numpy as np
 import pickle
 from pycaret.classification import *
-
+import shap
+import matplotlib.pyplot as plt
 from streamlit_custom_slider import st_custom_slider
 
 

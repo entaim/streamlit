@@ -5,8 +5,9 @@ import pickle
 from pycaret.classification import *
 
 
-st.markdown('<p align="center"> Water Quality **Estimation** </p>', unsafe_allow_html=True))
+#st.markdown('<p align="center"> Water Quality **Estimation** </p>', unsafe_allow_html=True))
 
+st.markdown(' <p align="center">  Water Quality **Estimation**   </p>', unsafe_allow_html=True)	
 
 
 st.markdown("""

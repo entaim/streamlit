@@ -17,8 +17,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
+#st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
  
+st.markdown(' <p align="center"><img width="523" src="https://user-images.githubusercontent.com/20365333/135308375-7014d076-2012-44d8-ac93-4cea66f4026e.png"></p>', unsafe_allow_html=True)	
 
 st.write("""
 

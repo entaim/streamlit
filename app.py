@@ -87,8 +87,8 @@ else:
 #load_clf= pd.read_csv("water1.csv")
 load_clf= load_model('dt_saved_07032020')
 prediction=load_clf.predict(input_params)
-st.subheader("The Prediction is :bulb:")
-st.write(" :bulb:", prediction[0])
+st.subheader("The Prediction is")
+st.subheader(" :bulb:", prediction[0])
 
 if(prediction[0]==1):
 	st.subheader("The water is safe to drink :droplet: :thumbsup:")

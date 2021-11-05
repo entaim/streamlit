@@ -3,7 +3,7 @@ import pandas as pd
 import shap
 import matplotlib.pyplot as plt
 #from sklearn import datasets
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import RepeatedKFold
@@ -42,6 +42,7 @@ prediction=load_clf.predict(input_params)
 st.write(prediction[0])
 st.write('---')
 
+#load_clf=pickle.load(open('dt_saved_07032020.pkl','rb'))
 
 
 df4 = pd.read_csv('reg22.csv') 

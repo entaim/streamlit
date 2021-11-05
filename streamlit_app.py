@@ -66,11 +66,11 @@ def ahmed(uploaded_file):
         #u_img = Image.open(uploaded_file)
 #          Image.show(u_img, 'Uploaded Image', use_column_width=True)
         # We preprocess the image to fit in algorithm.
-        st.write(type(uploaded_file))
-        img = np.asarray(u_img)
+        #st.write(type(uploaded_file))
+        #img = np.asarray(u_img)
        
         # convert image to black and white pixels.
-        grayImage = 255 - cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        grayImage = 255 - cv2.cvtColor(uploaded_file, cv2.COLOR_BGR2GRAY)
         
         #plot the image to visualize the digit.
         #plt.imshow(grayImage)

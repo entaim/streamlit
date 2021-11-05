@@ -107,7 +107,7 @@ def ahmed(uploaded_file):
 #load_clf= load_model('gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
 
 
-prediction=model_xgb_2.predict(xgb.DMatrix(vec_img))
+#prediction=model_xgb_2.predict(xgb.DMatrix(vec_img))
 #st.write(prediction[0])
 #st.write('---')
 

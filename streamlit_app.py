@@ -90,7 +90,7 @@ model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")
 
 #load_clf = pd.read_pickle('https://github.com/entaim/streamlit/raw/master/gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
 #load_clf= load_model('gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
-prediction=model_xgb_2.predict(vec_img)
+prediction=model_xgb_2.predict(xgb.DMatrix(vec_img))
 st.write(prediction[0])
 st.write('---')
 

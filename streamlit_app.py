@@ -248,7 +248,8 @@ def main():
         #pred = pred[1].numpy()
     with right_column:
         st.header("Predicted Result")
-        st.title(str(p[0]))
+        #st.title(str(p[0]))
+        st.write(p[0])
 
 if __name__ == '__main__':
     main()

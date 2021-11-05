@@ -60,7 +60,7 @@ model_xgb_2 = xgb.Booster()
 model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")
 
 def pred(uploaded_file):
-    uploaded_file is not None:
+    if uploaded_file is not None:
         #st.image(uploaded_file, use_column_width=True)
   
         u_img = Image.open(uploaded_file)

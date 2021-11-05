@@ -207,7 +207,7 @@ def rgb2gray(rgb):
     return np.dot(rgb[...,:3], [0.299, 0.587, 0.144])
 
 def main():
-    layout.footer()
+#     layout.footer()
     st.title("MNIST Number Prediction")
     left_column, right_column = st.beta_columns(2)
 

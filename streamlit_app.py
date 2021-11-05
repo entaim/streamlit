@@ -235,7 +235,7 @@ def main():
         img = canvas_result.image_data
         grey = rgb2gray(img)
         grey = zoom(grey, 0.125)
-        st.image(grey, use_column_width=True)
+        st.image(img, use_column_width=True)
         #x_np = torch.from_numpy(grey).unsqueeze(0) #
         #x = x_np.unsqueeze(0)
         #x = x.float()

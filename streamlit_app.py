@@ -134,39 +134,39 @@ vec_img = None
 # # Apply Model to Make Prediction
 # prediction = model.predict(df)
 
-st.header('Predicted Price (Saudi Riyal) :red_circle:')
-st.write(round(prediction[0], 2),"SR") 
-st.write('---')
+# st.header('Predicted Price (Saudi Riyal) :red_circle:')
+# st.write(round(prediction[0], 2),"SR") 
+# st.write('---')
 
-# Explaining the model's predictions using SHAP values
-# https://github.com/slundberg/shap
-explainer = shap.TreeExplainer(model)
-shap_values = explainer.shap_values(X)
+# # Explaining the model's predictions using SHAP values
+# # https://github.com/slundberg/shap
+# explainer = shap.TreeExplainer(model)
+# shap_values = explainer.shap_values(X)
 
-st.header('Feature Importance')
-st.write('* SHAPE values show how much a given feature changed our prediction')
-plt.title('Feature importance based on SHAP values')
-shap.summary_plot(shap_values, X)
-st.pyplot(bbox_inches='tight')
-st.write('---')
-
-
-plt.title('Feature importance based on SHAP values (Bar)')
-shap.summary_plot(shap_values, X, plot_type="bar")
-st.pyplot(bbox_inches='tight')
-
-st.write('---')
-st.write('## Our Client :dizzy:')
-#st.write(x1)
-#st.write()
-st.write("""
+# st.header('Feature Importance')
+# st.write('* SHAPE values show how much a given feature changed our prediction')
+# plt.title('Feature importance based on SHAP values')
+# shap.summary_plot(shap_values, X)
+# st.pyplot(bbox_inches='tight')
+# st.write('---')
 
 
+# plt.title('Feature importance based on SHAP values (Bar)')
+# shap.summary_plot(shap_values, X, plot_type="bar")
+# st.pyplot(bbox_inches='tight')
 
-![](https://user-images.githubusercontent.com/20365333/138615337-bfbdfdb2-494c-4265-8ff0-467b158f95d3.png)
+# st.write('---')
+# st.write('## Our Client :dizzy:')
+# #st.write(x1)
+# #st.write()
+# st.write("""
 
 
-""")
+
+# ![](https://user-images.githubusercontent.com/20365333/138615337-bfbdfdb2-494c-4265-8ff0-467b158f95d3.png)
+
+
+# """)
 
 
 

@@ -43,12 +43,16 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 #Choose your own image
 uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 
+
+
 #st.write(type( np.asarray(Image.open(uploaded_file))))
 
 #im =  np.asarray(Image.open(uploaded_file))
 
 vec_img = None
 if uploaded_file is not None:
+   
+   st.image(uploaded_file, use_column_width=True)
    
    u_img = Image.open(uploaded_file)
 #    Image.show(u_img, 'Uploaded Image', use_column_width=True)
@@ -93,6 +97,7 @@ model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")
 prediction=model_xgb_2.predict(xgb.DMatrix(vec_img))
 st.write(prediction[0])
 st.write('---')
+
 
 #load_clf=pickle.load(open('dt_saved_07032020.pkl','rb'))
 

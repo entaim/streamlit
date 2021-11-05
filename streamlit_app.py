@@ -66,8 +66,9 @@ def ahmed(uploaded_file):
         #u_img = Image.open(uploaded_file)
 #          Image.show(u_img, 'Uploaded Image', use_column_width=True)
         # We preprocess the image to fit in algorithm.
+        st.write(type(img))
         img = np.asarray(u_img)
-        
+       
         # convert image to black and white pixels.
         grayImage = 255 - cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         

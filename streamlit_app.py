@@ -10,7 +10,7 @@ from sklearn.model_selection import RepeatedKFold
 from sklearn.preprocessing import RobustScaler
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split  
-
+import pickle 
 
 
 digit_path = 'https://git.uwaterloo.ca/aaljmiai/ahdd1/-/raw/master/'
@@ -20,7 +20,7 @@ X_test = pd.read_csv(digit_path + 'csvTestImages_10k_x_784.csv')
 #X_train = pd.read_csv(digit_path + 'csvTrainImages_60k_x_784.csv')
 
 #dd = 
-st.write(y_test + X_test )
+st.write(X_test)
 st.code()
 st.success('Success message')
 st.write("""
@@ -32,10 +32,17 @@ st.write("""
 # Dynamic Price Prediction 
 * This app predicts the **Booking.com Prices**!
 
- 
-
 """)
 st.write('---')
+
+Load_clf= load_model('dt_saved_07032020')
+prediction=load_clf.predict(input_params)
+st.write('---')
+
+
+
+
+
 
 
 df4 = pd.read_csv('reg22.csv') 

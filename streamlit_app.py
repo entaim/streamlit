@@ -15,15 +15,19 @@ from sklearn.model_selection import train_test_split
 
 
 
-
 st.write("""
 # Welcome to Booking  Prediction :star: 
 
 """)
 st.write('---')
- 
-st.write('---')
+st.write("""
+# Dynamic Price Prediction 
+* This app predicts the **Booking.com Prices**!
 
+ 
+
+""")
+st.write('---')
 #boston = load_boston()
 #from sklearn.datasets import load_boston
 #boston = load_boston()

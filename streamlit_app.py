@@ -47,7 +47,7 @@ uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 #im =  np.asarray(Image.open(uploaded_file))
 
 vec_img = None
-if im is not None:
+if uploaded_file is not None:
    
    u_img = Image.open(uploaded_file)
    Image.show(u_img, 'Uploaded Image', use_column_width=True)

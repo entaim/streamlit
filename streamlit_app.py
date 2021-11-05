@@ -11,7 +11,7 @@ from sklearn.preprocessing import RobustScaler
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split  
 import pickle 
-import xgboost
+import xgboost as xgb
 
 # digit_path = 'https://git.uwaterloo.ca/aaljmiai/ahdd1/-/raw/master/'
 # y_test = pd.read_csv(digit_path + 'csvTestLabel_10k_x_1.csv')
@@ -29,9 +29,13 @@ st.write("""
 """)
 st.write('---')
 
-load_clf = pd.read_pickle('https://github.com/entaim/streamlit/raw/master/gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
+
+model_xgb_2 = xgb.Booster()
+model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")
+
+#load_clf = pd.read_pickle('https://github.com/entaim/streamlit/raw/master/gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
 #load_clf= load_model('gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
-prediction=load_clf.predict(input_params)
+prediction=model_xgb_2.predict(input_params)
 st.write(prediction[0])
 st.write('---')
 

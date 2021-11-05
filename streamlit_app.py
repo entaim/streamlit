@@ -19,8 +19,8 @@ X_test = pd.read_csv(digit_path + 'csvTestImages_10k_x_784.csv')
 #y_train = pd.read_csv(digit_path + 'csvTrainLabel_60k_x_1.csv')
 #X_train = pd.read_csv(digit_path + 'csvTrainImages_60k_x_784.csv')
 
-dd= y_test.merge(X_test)
-st.write(dd)
+#dd = 
+st.write(y_test.merge(X_test))
 
 st.write("""
 # Welcome to Booking  Prediction :star: 

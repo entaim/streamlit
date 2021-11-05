@@ -1,4 +1,4 @@
-# Welcome to Image Project (ML/AI)!
+# Welcome to Image Recognition Project (ML/AI)!
 
 
 * https://share.streamlit.io/a-safarji/streamlit

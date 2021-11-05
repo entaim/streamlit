@@ -251,7 +251,7 @@ def main():
     with right_column:
         st.header("Predicted Result")
         
-        st.title('Pred ')
+#         st.title('Pred ')
         st.image(p[0], clamp=True)
     st.write(np.float16(p[1][0]))
 

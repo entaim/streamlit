@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split  
 import pickle 
 import xgboost as xgb
-import cv as cv2
+import cv2 as cv
 
 # digit_path = 'https://git.uwaterloo.ca/aaljmiai/ahdd1/-/raw/master/'
 # y_test = pd.read_csv(digit_path + 'csvTestLabel_10k_x_1.csv')

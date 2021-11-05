@@ -213,7 +213,7 @@ def rgb2gray(rgb):
 
 def main():
 #     layout.footer()
-    st.title("MNIST Number Prediction")
+    st.title("Handwritten Arabic Digit - Classification Model")
     left_column, right_column = st.columns(2)
 
     # st.write(model.eval())

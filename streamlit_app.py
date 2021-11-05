@@ -59,7 +59,7 @@ from PIL import Image
 model_xgb_2 = xgb.Booster()
 model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")
 
-def pred(uploaded_file):
+def ahmed(uploaded_file):
     if uploaded_file is not None:
         #st.image(uploaded_file, use_column_width=True)
   
@@ -238,7 +238,7 @@ p = None
         #grey = rgb2gray(img)
         #grey = zoom(grey, 0.125)
         st.image(img, use_column_width=True)
-        p = pred(img)
+        p = ahmed(img)
         #x_np = torch.from_numpy(grey).unsqueeze(0) #
         #x = x_np.unsqueeze(0)
         #x = x.float()

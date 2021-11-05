@@ -15,11 +15,11 @@ from sklearn.model_selection import train_test_split
 
 digit_path = 'https://git.uwaterloo.ca/aaljmiai/ahdd1/-/raw/master/'
 y_test = pd.read_csv(digit_path + 'csvTestLabel_10k_x_1.csv')
-X_test = pd.read_csv(digit_path + 'csvTestImages_10k_x_784.csv')
-y_train = pd.read_csv(digit_path + 'csvTrainLabel_60k_x_1.csv')
-X_train = pd.read_csv(digit_path + 'csvTrainImages_60k_x_784.csv')
+#X_test = pd.read_csv(digit_path + 'csvTestImages_10k_x_784.csv')
+#y_train = pd.read_csv(digit_path + 'csvTrainLabel_60k_x_1.csv')
+#X_train = pd.read_csv(digit_path + 'csvTrainImages_60k_x_784.csv')
 
-st.write(X_train)
+st.write(y_test)
 
 st.write("""
 # Welcome to Booking  Prediction :star: 

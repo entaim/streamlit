@@ -12,6 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split  
 import pickle 
 import xgboost as xgb
+import cv2
 
 # digit_path = 'https://git.uwaterloo.ca/aaljmiai/ahdd1/-/raw/master/'
 # y_test = pd.read_csv(digit_path + 'csvTestLabel_10k_x_1.csv')
@@ -30,12 +31,59 @@ st.write("""
 st.write('---')
 
 
+image = Image.open('images/image.png')
+show = st.image(image, use_column_width=True)
+
+st.sidebar.title("Upload Image")
+
+#Disabling warning
+st.set_option('deprecation.showfileUploaderEncoding', False)
+#Choose your own image
+uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
+
+vec_img = None
+if uploaded_file is not None:
+    
+    u_img = Image.open(uploaded_file)
+    show.image(u_img, 'Uploaded Image', use_column_width=True)
+    # We preprocess the image to fit in algorithm.
+    img = np.asarray(u_img)/255
+    
+    # convert image to black and white pixels.
+    grayImage = 255 - cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    # plot the image to visualize the digit.
+    #plt.imshow(grayImage)
+    #plt.show()
+    
+    # flip the image up down to meet the image orientation of the training dataset.
+    #grayImage = cv2.flip(grayImage,0)
+    grayImage = cv2.rotate(grayImage, cv2.cv2.ROTATE_90_COUNTERCLOCKWISE)
+    #plt.imshow(grayImage)
+    #plt.show()
+    
+    # resize the orginal image to 28x28 as in the dataset
+    # dsize
+    width  = 8
+    height = 8
+    dsize = (width, height)
+
+    # resize image
+    output = cv2.resize(grayImage, dsize, interpolation = cv2.INTER_AREA)
+    #plt.imshow(output)
+    #plt.show()
+    
+    # vectorizing the image
+    vec_img = output.reshape(1, -1)
+    
+    
+
 model_xgb_2 = xgb.Booster()
 model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")
 
 #load_clf = pd.read_pickle('https://github.com/entaim/streamlit/raw/master/gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
 #load_clf= load_model('gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
-prediction=model_xgb_2.predict(input_params)
+prediction=model_xgb_2.predict(vec_img)
 st.write(prediction[0])
 st.write('---')
 
@@ -135,23 +183,6 @@ st.write("""
 """)
 
 
-# image = Image.open('images/image.png')
-# show = st.image(image, use_column_width=True)
 
-st.sidebar.title("Upload Image")
-
-#Disabling warning
-st.set_option('deprecation.showfileUploaderEncoding', False)
-#Choose your own image
-uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
-
-if uploaded_file is not None:
-    
-    u_img = Image.open(uploaded_file)
-    show.image(u_img, 'Uploaded Image', use_column_width=True)
-    # We preprocess the image to fit in algorithm.
-    image = np.asarray(u_img)/255
-    
-    my_image= resize(image, (64,64)).reshape((1, 64*64*3)).T
 
 

@@ -100,7 +100,7 @@ def ahmed(uploaded_file):
         #st.image(output, use_column_width=True)
         
         #return model_xgb_2.predict(xgb.DMatrix(vec_img))
-        return cv2.resize(vec_img.reshape(8,8), (512, 512), interpolation = cv2.INTER_AREA),  model_xgb_2.predict(xgb.DMatrix(vec_img))
+        return cv2.resize(vec_img.reshape(8,8), (128, 128), interpolation = cv2.INTER_AREA),  model_xgb_2.predict(xgb.DMatrix(vec_img))
   
   
 

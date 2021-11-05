@@ -253,7 +253,7 @@ def main():
         
         st.subheader('Pred# ')
         st.image(p[0], clamp=True)
-    st.write(np.round(p[1][0]),5)
+    st.write(np.round(p[1][0], 3))
 
 if __name__ == '__main__':
     main()

@@ -1,4 +1,4 @@
-# Welcome to Image Peoject (ML/AI)!
+# Welcome to Image Project (ML/AI)!
 
 
 * https://share.streamlit.io/a-safarji/streamlit

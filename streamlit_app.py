@@ -251,7 +251,7 @@ def main():
         st.header("Predicted Result")
         #st.title(str(p[0]))
         #st.write(p[0])
-        st.image(p)
+        st.image(p, width=12)
 
 if __name__ == '__main__':
     main()

@@ -15,6 +15,7 @@ import xgboost as xgb
 import cv2
 from PIL import Image
 
+
 # digit_path = 'https://git.uwaterloo.ca/aaljmiai/ahdd1/-/raw/master/'
 # y_test = pd.read_csv(digit_path + 'csvTestLabel_10k_x_1.csv')
 # X_test = pd.read_csv(digit_path + 'csvTestImages_10k_x_784.csv')

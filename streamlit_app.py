@@ -98,7 +98,8 @@ def ahmed(uploaded_file):
         vec_img = output.reshape(1, -1)/255
         #st.image(output, use_column_width=True)
         
-        return model_xgb_2.predict(xgb.DMatrix(vec_img))
+        #return model_xgb_2.predict(xgb.DMatrix(vec_img))
+        return output
   
   
 
@@ -249,7 +250,8 @@ def main():
     with right_column:
         st.header("Predicted Result")
         #st.title(str(p[0]))
-        st.write(p[0])
+        #st.write(p[0])
+        st.image(p.reshape(8,8))
 
 if __name__ == '__main__':
     main()

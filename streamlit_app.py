@@ -63,7 +63,7 @@ def ahmed(uploaded_file):
     if uploaded_file is not None:
         #st.image(uploaded_file, use_column_width=True)
   
-        u_img = Image.open(uploaded_file)
+        #u_img = Image.open(uploaded_file)
 #          Image.show(u_img, 'Uploaded Image', use_column_width=True)
         # We preprocess the image to fit in algorithm.
         img = np.asarray(u_img)

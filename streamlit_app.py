@@ -100,7 +100,7 @@ def ahmed(uploaded_file):
         #st.image(output, use_column_width=True)
         
         #return model_xgb_2.predict(xgb.DMatrix(vec_img))
-        return grayImage
+        return vec_img,  model_xgb_2.predict(xgb.DMatrix(vec_img))
   
   
 
@@ -250,9 +250,10 @@ def main():
         #pred = pred[1].numpy()
     with right_column:
         st.header("Predicted Result")
-        #st.title(str(p[0]))
-        #st.write(p[0])
-        st.image(p, clamp=True)
+        
+        st.title('Pred# ')
+        st.image(p[0], clamp=True)
+    st.write(p[1][0])
 
 if __name__ == '__main__':
     main()

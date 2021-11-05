@@ -40,6 +40,10 @@ st.sidebar.title("Upload Image")
 
 #Disabling warning
 st.set_option('deprecation.showfileUploaderEncoding', False)
+
+from ipysketch import Sketch
+Sketch('im')
+
 #Choose your own image
 uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 

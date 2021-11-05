@@ -42,7 +42,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 #Choose your own image
 uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 
-st.write(type(uploaded_file))
+st.write(type( Image.open(uploaded_file)))
 
 vec_img = None
 #if uploaded_file is not None:

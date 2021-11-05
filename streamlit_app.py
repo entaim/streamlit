@@ -102,7 +102,7 @@ model.fit(X_train, y_train)
 prediction = model.predict(df)
 
 st.header('Predicted Price (Saudi Riyal) :red_circle:')
-st.write(prediction[0], "SR")
+st.write(round(prediction[0], 2),"SR") 
 st.write('---')
 
 # Explaining the model's predictions using SHAP values

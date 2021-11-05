@@ -35,8 +35,11 @@ st.write("""
 """)
 st.write('---')
 
+
+
 Load_clf= load_model('dt_saved_07032020')
 prediction=load_clf.predict(input_params)
+st.write(prediction[0])
 st.write('---')
 
 

@@ -44,10 +44,6 @@ st.write('---')
 
 
 
-
-
-
-
 df4 = pd.read_csv('reg22.csv') 
 x1= df4
 x1['Log_price'] = np.log(x1['price'])
@@ -141,6 +137,23 @@ st.write("""
 """)
 
 
+image = Image.open('images/image.png')
+show = st.image(image, use_column_width=True)
 
+st.sidebar.title("Upload Image")
+
+#Disabling warning
+st.set_option('deprecation.showfileUploaderEncoding', False)
+#Choose your own image
+uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
+
+if uploaded_file is not None:
+    
+    u_img = Image.open(uploaded_file)
+    show.image(u_img, 'Uploaded Image', use_column_width=True)
+    # We preprocess the image to fit in algorithm.
+    image = np.asarray(u_img)/255
+    
+    my_image= resize(image, (64,64)).reshape((1, 64*64*3)).T
 
 

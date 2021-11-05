@@ -93,49 +93,32 @@ vec_img = None
 #load_clf=pickle.load(open('dt_saved_07032020.pkl','rb'))
 
 
-df4 = pd.read_csv('reg22.csv') 
-x1= df4
-x1['Log_price'] = np.log(x1['price'])
-
-#st.write(x1)
-
-
-
-X=  x1[['beds','number_of_ratings','rating']]
-Y= x1['price']
-#st.write(X)
-
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=40)
-#X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=10)
-
-#X_cv, X_test, y_cv, y_test = train_test_split(X_test, y_test, test_size=0.5, random_state=10)
-
 #sc = StandardScaler()
 #X_train = sc.fit_transform(X_train)
 #X_test = sc.transform(X_test)
 
 # Header of Specify Input Parameters
-st.sidebar.header('Specify Input Parameters')
+# st.sidebar.header('Specify Input Parameters')
 
-def user_input_features():
+# def user_input_features():
     
-    #AGE = st.sidebar.slider('AGE',  float(X.AGE.min()),  float(X.AGE.max()),  float(X.AGE.mean()))
-    beds = st.sidebar.slider('Number of beds',  int(X.beds.min()),  int(X.beds.max()),  int(X.beds.mean()))
-    review = st.sidebar.slider('Number of reviews',  int(X.number_of_ratings.min()),  int(X.number_of_ratings.max()),  int(X.number_of_ratings.mean()))
-    rating = st.sidebar.slider('Ratings',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
-   # Size = st.sidebar.slider('Room Size(m2)',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
+#     #AGE = st.sidebar.slider('AGE',  float(X.AGE.min()),  float(X.AGE.max()),  float(X.AGE.mean()))
+#     beds = st.sidebar.slider('Number of beds',  int(X.beds.min()),  int(X.beds.max()),  int(X.beds.mean()))
+#     review = st.sidebar.slider('Number of reviews',  int(X.number_of_ratings.min()),  int(X.number_of_ratings.max()),  int(X.number_of_ratings.mean()))
+#     rating = st.sidebar.slider('Ratings',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
+#    # Size = st.sidebar.slider('Room Size(m2)',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
    
    
-    data = {'Number of beds': beds,
-            'Number of reviews': review,
-            'Ratings': rating,
-            }
+#     data = {'Number of beds': beds,
+#             'Number of reviews': review,
+#             'Ratings': rating,
+#             }
 
             
-    features = pd.DataFrame(data, index=[0])
-    return features
+#     features = pd.DataFrame(data, index=[0])
+#     return features
   
-df = user_input_features()
+# df = user_input_features()
 
 # Main Panel
 
@@ -144,12 +127,12 @@ df = user_input_features()
 #st.write()
 #st.write('---')
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
-# Build Regression Model
-model = RandomForestRegressor(n_estimators=10, random_state=0)
-model.fit(X_train, y_train)
-# Apply Model to Make Prediction
-prediction = model.predict(df)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
+# # Build Regression Model
+# model = RandomForestRegressor(n_estimators=10, random_state=0)
+# model.fit(X_train, y_train)
+# # Apply Model to Make Prediction
+# prediction = model.predict(df)
 
 st.header('Predicted Price (Saudi Riyal) :red_circle:')
 st.write(round(prediction[0], 2),"SR") 

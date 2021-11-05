@@ -66,7 +66,7 @@ def ahmed(uploaded_file):
         #u_img = Image.open(uploaded_file)
 #          Image.show(u_img, 'Uploaded Image', use_column_width=True)
         # We preprocess the image to fit in algorithm.
-        st.write(type(img))
+        st.write(type(uploaded_file))
         img = np.asarray(u_img)
        
         # convert image to black and white pixels.

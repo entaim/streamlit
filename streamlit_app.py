@@ -21,20 +21,7 @@ st.write("""
 
 """)
 st.write('---')
-  st.write(
-        """
-        # Example Widgets
-        
-        These widgets don't do anything. But look at all the new colors they got 👀 
-    
-        ```python
-        # First some code.
-        streamlit = "cool"
-        theming = "fantastic"
-        both = "💥"
-        ```
-        """
-    )
+ 
 st.write('---')
 
 #boston = load_boston()

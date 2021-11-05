@@ -20,8 +20,9 @@ X_test = pd.read_csv(digit_path + 'csvTestImages_10k_x_784.csv')
 #X_train = pd.read_csv(digit_path + 'csvTrainImages_60k_x_784.csv')
 
 #dd = 
-st.write(y_test)
-
+st.write(y_test + X_test )
+st.code()
+st.success('Success message')
 st.write("""
 # Welcome to Booking  Prediction :star: 
 

@@ -19,14 +19,8 @@ import pickle
 #y_train = pd.read_csv(digit_path + 'csvTrainLabel_60k_x_1.csv')
 #X_train = pd.read_csv(digit_path + 'csvTrainImages_60k_x_784.csv')
 
-#dd = 
-# st.write(X_test)
-# st.code()
-st.success('Success message')
-st.write("""
-# Welcome to Booking  Prediction :star: 
 
-""")
+st.success('Success message')
 
 st.write('---')
 st.write("""

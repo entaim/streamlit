@@ -214,7 +214,7 @@ def rgb2gray(rgb):
 def main():
 #     layout.footer()
     st.title("MNIST Number Prediction")
-    left_column, right_column = st.beta_columns(2)
+    left_column, right_column = st.columns(2)
 
     # st.write(model.eval())
 

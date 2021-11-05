@@ -70,7 +70,7 @@ def ahmed(uploaded_file):
         #img = np.asarray(u_img)
        
         # convert image to black and white pixels.
-        grayImage = 255 - cv2.cvtColor(uploaded_file, cv2.COLOR_BGR2GRAY)
+        #grayImage = 255 - cv2.cvtColor(uploaded_file, cv2.COLOR_BGR2GRAY)
         
         #plot the image to visualize the digit.
         #plt.imshow(grayImage)
@@ -79,7 +79,7 @@ def ahmed(uploaded_file):
         # flip the image up down to meet the image orientation of the training dataset.
         #grayImage = cv2.flip(grayImage,0)
 #          grayImage = cv2.rotate(grayImage, cv2.cv.ROTATE_90_COUNTERCLOCKWISE)
-        grayImage = np.rot90(grayImage,1)
+        grayImage = np.rot90(uploaded_file,1)
         #plt.imshow(grayImage)
         #plt.show()
         #st.image(grayImage, use_column_width=True)
@@ -236,10 +236,10 @@ def main():
     # Do something interesting with the image data and paths
     if canvas_result.image_data is not None:
         img = canvas_result.image_data
-        #grey = rgb2gray(img)
+        grey = rgb2gray(img)
         #grey = zoom(grey, 0.125)
-        st.image(img, use_column_width=True)
-        p = ahmed(img)
+        st.image(grey, use_column_width=True)
+        p = ahmed(grey)
         #x_np = torch.from_numpy(grey).unsqueeze(0) #
         #x = x_np.unsqueeze(0)
         #x = x.float()

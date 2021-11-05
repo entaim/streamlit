@@ -79,7 +79,8 @@ def ahmed(uploaded_file):
         # flip the image up down to meet the image orientation of the training dataset.
         #grayImage = cv2.flip(grayImage,0)
 #          grayImage = cv2.rotate(grayImage, cv2.cv.ROTATE_90_COUNTERCLOCKWISE)
-        grayImage = np.rot90(uploaded_file,1)
+        grayImage = np.flipud(np.rot90(uploaded_file,1))
+        
         #plt.imshow(grayImage)
         #plt.show()
         #st.image(grayImage, use_column_width=True)

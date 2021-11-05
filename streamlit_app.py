@@ -54,7 +54,7 @@ from PIL import Image
 #
 ##im =  np.asarray(Image.open(uploaded_file))
 #
-#vec_img = None
+vec_img = None
 
 model_xgb_2 = xgb.Booster()
 model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")

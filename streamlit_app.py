@@ -21,6 +21,7 @@ from PIL import Image
 #y_train = pd.read_csv(digit_path + 'csvTrainLabel_60k_x_1.csv')
 #X_train = pd.read_csv(digit_path + 'csvTrainImages_60k_x_784.csv')
 
+st.write(cv2.__version__)
 
 st.success('Success message')
 

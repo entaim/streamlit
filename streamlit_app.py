@@ -64,7 +64,8 @@ if uploaded_file is not None:
    
    # flip the image up down to meet the image orientation of the training dataset.
    #grayImage = cv2.flip(grayImage,0)
-   grayImage = cv2.rotate(grayImage, cv2.cv.ROTATE_90_COUNTERCLOCKWISE)
+#    grayImage = cv2.rotate(grayImage, cv2.cv.ROTATE_90_COUNTERCLOCKWISE)
+   grayImage = numpy.rot90(grayImage,3)
    #plt.imshow(grayImage)
    #plt.show()
    

@@ -55,59 +55,61 @@ from PIL import Image
 ##im =  np.asarray(Image.open(uploaded_file))
 #
 #vec_img = None
-#if uploaded_file is not None:
-#   
-#   st.image(uploaded_file, use_column_width=True)
-#   
-#   u_img = Image.open(uploaded_file)
-##    Image.show(u_img, 'Uploaded Image', use_column_width=True)
-#   # We preprocess the image to fit in algorithm.
-#   img = np.asarray(u_img)
-#   
-#   # convert image to black and white pixels.
-#   grayImage = 255 - cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-#   
-#   # plot the image to visualize the digit.
-#   #plt.imshow(grayImage)
-#   #plt.show()
-#   
-#   # flip the image up down to meet the image orientation of the training dataset.
-#   #grayImage = cv2.flip(grayImage,0)
-##    grayImage = cv2.rotate(grayImage, cv2.cv.ROTATE_90_COUNTERCLOCKWISE)
-#   grayImage = np.rot90(grayImage,1)
-#   #plt.imshow(grayImage)
-#   #plt.show()
-#   st.image(grayImage, use_column_width=True)
-#   
-#   # resize the orginal image to 28x28 as in the dataset
-#   # dsize
-#   width  = 8
-#   height = 8
-#   dsize = (width, height)
+
+model_xgb_2 = xgb.Booster()
+model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")
+
+def pred(uploaded_file):
+    uploaded_file is not None:
+        #st.image(uploaded_file, use_column_width=True)
+  
+        u_img = Image.open(uploaded_file)
+#          Image.show(u_img, 'Uploaded Image', use_column_width=True)
+        # We preprocess the image to fit in algorithm.
+        img = np.asarray(u_img)
+        
+        # convert image to black and white pixels.
+        grayImage = 255 - cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        
+        #plot the image to visualize the digit.
+        #plt.imshow(grayImage)
+        #plt.show()
+        
+        # flip the image up down to meet the image orientation of the training dataset.
+        #grayImage = cv2.flip(grayImage,0)
+#          grayImage = cv2.rotate(grayImage, cv2.cv.ROTATE_90_COUNTERCLOCKWISE)
+        grayImage = np.rot90(grayImage,1)
+        #plt.imshow(grayImage)
+        #plt.show()
+        #st.image(grayImage, use_column_width=True)
+        
+        # resize the orginal image to 28x28 as in the dataset
+        # dsize
+        width  = 8
+        height = 8
+        dsize = (width, height)
+                # resize image
+        output = cv2.resize(grayImage, dsize, interpolation = cv2.INTER_AREA)
+        #plt.imshow(output)
+        #plt.show()
+        
+        # vectorizing the image
+        vec_img = output.reshape(1, -1)/255
+        #st.image(output, use_column_width=True)
+        
+        return model_xgb_2.predict(xgb.DMatrix(vec_img))
+  
+  
+
+
 #
-#   # resize image
-#   output = cv2.resize(grayImage, dsize, interpolation = cv2.INTER_AREA)
-#   #plt.imshow(output)
-#   #plt.show()
-#   
-#   # vectorizing the image
-#   vec_img = output.reshape(1, -1)/255
-#   st.image(output, use_column_width=True)
-#   
-#   
-#
-#model_xgb_2 = xgb.Booster()
-#model_xgb_2.load_model("gbm_n_estimators60000_objective_softmax_8_by_8_pix")
-#
-##load_clf = pd.read_pickle('https://github.com/entaim/streamlit/raw/master/gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
-##load_clf= load_model('gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
-#prediction=model_xgb_2.predict(xgb.DMatrix(vec_img))
+#load_clf = pd.read_pickle('https://github.com/entaim/streamlit/raw/master/gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
+#load_clf= load_model('gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
+
+
+prediction=model_xgb_2.predict(xgb.DMatrix(vec_img))
 #st.write(prediction[0])
 #st.write('---')
-
-
-#load_clf=pickle.load(open('dt_saved_07032020.pkl','rb'))
-
 
 #sc = StandardScaler()
 #X_train = sc.fit_transform(X_train)
@@ -229,13 +231,14 @@ def main():
                 drawing_mode="freedraw",
                 key="canvas",
         )
-
+p = None
     # Do something interesting with the image data and paths
     if canvas_result.image_data is not None:
         img = canvas_result.image_data
-        grey = rgb2gray(img)
-        grey = zoom(grey, 0.125)
+        #grey = rgb2gray(img)
+        #grey = zoom(grey, 0.125)
         st.image(img, use_column_width=True)
+        p = pred(img)
         #x_np = torch.from_numpy(grey).unsqueeze(0) #
         #x = x_np.unsqueeze(0)
         #x = x.float()
@@ -244,7 +247,7 @@ def main():
         #pred = pred[1].numpy()
     with right_column:
         st.header("Predicted Result")
-        st.title(str(pred[0]))
+        st.title(str(p[0]))
 
 if __name__ == '__main__':
     main()

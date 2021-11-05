@@ -46,7 +46,7 @@ vec_img = None
 if uploaded_file is not None:
     
     u_img = Image.open(uploaded_file)
-    show.image(u_img, 'Uploaded Image', use_column_width=True)
+    Image.show(u_img, 'Uploaded Image', use_column_width=True)
     # We preprocess the image to fit in algorithm.
     img = np.asarray(u_img)/255
     

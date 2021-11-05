@@ -72,6 +72,7 @@ if uploaded_file is not None:
    grayImage = np.rot90(grayImage,1)
    #plt.imshow(grayImage)
    #plt.show()
+   st.image(grayImage, use_column_width=True)
    
    # resize the orginal image to 28x28 as in the dataset
    # dsize

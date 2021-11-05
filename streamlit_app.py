@@ -99,7 +99,7 @@ def ahmed(uploaded_file):
         #st.image(output, use_column_width=True)
         
         #return model_xgb_2.predict(xgb.DMatrix(vec_img))
-        return output
+        return grayImage
   
   
 
@@ -251,7 +251,7 @@ def main():
         st.header("Predicted Result")
         #st.title(str(p[0]))
         #st.write(p[0])
-        st.image(p.reshape(8,8))
+        st.image(p)
 
 if __name__ == '__main__':
     main()

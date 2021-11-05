@@ -231,7 +231,7 @@ def main():
                 drawing_mode="freedraw",
                 key="canvas",
         )
-p = None
+    p = None
     # Do something interesting with the image data and paths
     if canvas_result.image_data is not None:
         img = canvas_result.image_data

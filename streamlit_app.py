@@ -52,7 +52,7 @@ if uploaded_file is not None:
    u_img = Image.open(uploaded_file)
 #    Image.show(u_img, 'Uploaded Image', use_column_width=True)
    # We preprocess the image to fit in algorithm.
-   img = np.asarray(u_img)/255
+   img = np.asarray(u_img)
    
    # convert image to black and white pixels.
    grayImage = 255 - cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -79,7 +79,7 @@ if uploaded_file is not None:
    #plt.show()
    
    # vectorizing the image
-   vec_img = output.reshape(1, -1)
+   vec_img = output.reshape(1, -1)/255
    
    
 

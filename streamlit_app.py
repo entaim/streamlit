@@ -27,15 +27,13 @@ st.write("""
 # Welcome to Booking  Prediction :star: 
 
 """)
+
 st.write('---')
 st.write("""
-# Dynamic Price Prediction 
-* This app predicts the **Booking.com Prices**!
+# Arabic Handwritten Image Recognition
 
 """)
 st.write('---')
-
-
 
 Load_clf= load_model('dt_saved_07032020')
 prediction=load_clf.predict(input_params)

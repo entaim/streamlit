@@ -1,4 +1,4 @@
-# Welcome to Regression Peoject (ML/AI)!
+# Welcome to Image Peoject (ML/AI)!
 
 
 * https://share.streamlit.io/a-safarji/streamlit

@@ -258,5 +258,5 @@ def main():
 if __name__ == '__main__':
     main()
     import warnings
-    warnings.filterwarnings(‘ignore’)
+    warnings.filterwarnings('ignore')
 

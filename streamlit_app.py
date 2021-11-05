@@ -31,8 +31,8 @@ st.write("""
 st.write('---')
 
 
-image = Image.open('im.png')
-show = st.image(image, use_column_width=True)
+# image = Image.open('im.png')
+# show = st.image(image, use_column_width=True)
 
 st.sidebar.title("Upload Image")
 

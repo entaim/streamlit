@@ -86,6 +86,7 @@ if uploaded_file is not None:
    
    # vectorizing the image
    vec_img = output.reshape(1, -1)/255
+   st.image(output, use_column_width=True)
    
    
 

@@ -29,7 +29,8 @@ st.write("""
 """)
 st.write('---')
 
-load_clf= load_model('gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
+load_clf = pd.read_pickle('https://github.com/entaim/streamlit/raw/master/gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
+#load_clf= load_model('gbm_n_estimators60000_objective_softmax_8_by_8_pix.pickle')
 prediction=load_clf.predict(input_params)
 st.write(prediction[0])
 st.write('---')

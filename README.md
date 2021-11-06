@@ -1,4 +1,4 @@
-# Welcome to Image Recognition Project (ML/AI)!
+# Welcome to Handwritten Arabic Digit - Classification Model!
 
 
 * https://share.streamlit.io/a-safarji/streamlit

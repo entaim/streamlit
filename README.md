@@ -1,7 +1,7 @@
 # Welcome to Handwritten Arabic Digit - Classification Model!
 
 
-* https://share.streamlit.io/a-safarji/streamlit
+* The link is soon to be shared. Stay tuned :) <!--https://share.streamlit.io/a-safarji/streamlit-->
 
 <!--Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
 

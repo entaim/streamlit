@@ -114,32 +114,6 @@ def ahmed(uploaded_file):
 #st.write(prediction[0])
 #st.write('---')
 
-#sc = StandardScaler()
-#X_train = sc.fit_transform(X_train)
-#X_test = sc.transform(X_test)
-
-# Header of Specify Input Parameters
-# st.sidebar.header('Specify Input Parameters')
-
-# def user_input_features():
-    
-#     #AGE = st.sidebar.slider('AGE',  float(X.AGE.min()),  float(X.AGE.max()),  float(X.AGE.mean()))
-#     beds = st.sidebar.slider('Number of beds',  int(X.beds.min()),  int(X.beds.max()),  int(X.beds.mean()))
-#     review = st.sidebar.slider('Number of reviews',  int(X.number_of_ratings.min()),  int(X.number_of_ratings.max()),  int(X.number_of_ratings.mean()))
-#     rating = st.sidebar.slider('Ratings',  float(X.rating.min()),  float(X.rating.max()),  float(X.rating.mean()))
-#    # Size = st.sidebar.slider('Room Size(m2)',  float(X.Size.min()),  float(X.Size.max()),  float(X.Size.mean()))
-   
-   
-#     data = {'Number of beds': beds,
-#             'Number of reviews': review,
-#             'Ratings': rating,
-#             }
-
-            
-#     features = pd.DataFrame(data, index=[0])
-#     return features
-  
-# df = user_input_features()
 
 # Main Panel
 
